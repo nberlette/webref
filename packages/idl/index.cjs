@@ -33,8 +33,8 @@ async function listAll({folder = __dirname} = {}) {
   return all;
 }
 
-async function parseAll(options) {
-  const all = await listAll(options);
+async function parseAll({ folder = __dirname } = {}) {
+  const all = await listAll({ folder });
   for (const [key, value] of Object.entries(all)) {
     all[key] = await value.parse();
   }
