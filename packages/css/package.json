@@ -11,11 +11,15 @@
     "url": "https://github.com/w3c/webref/issues"
   },
   "license": "MIT",
-  "main": "index.js",
+  "type": "module",
+  "main": "index.cjs",
+  "module": "index.js",
+  "esnext": "index.js",
   "types": "index.d.ts",
   "exports": {
     ".": {
       "types": "./index.d.ts",
+      "require": "./index.cjs",
       "default": "./index.js"
     },
     "./*": "./*"
